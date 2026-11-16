@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IOHA Certificates Platform — Emmanuel Ode</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <nav class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="../index.html"><span class="brand-dot"></span><span>Emmanuel Ode</span></a>
+      <div class="nav-links">
+        <a href="../index.html#projects">All 4 Projects</a>
+        <a href="../cv.html">Interactive CV</a>
+      </div>
+      <a class="btn btn-primary" href="../cv.html">View / Print CV →</a>
+    </div>
+  </nav>
+
+  <main class="container case-hero">
+    <a class="breadcrumb" href="../index.html#projects">← Back to All Projects</a>
+    <div class="project-tag">Case Study 02 • Production SaaS (165 Certificates Issued)</div>
+    <h1 style="font-size: clamp(1.9rem, 3.8vw, 2.8rem); margin-bottom: 12px;">IOHA Certificates Platform</h1>
+    <p style="color: var(--muted); max-width: 740px; font-size: 1.05rem;">
+      A full-stack certificate generation, management, and QR-verification web application deployed on Vercel—already used in production to issue <strong>165 QR-verified certificates across 5 international webinars</strong>.
+    </p>
+
+    <div class="case-shot-lg">
+      <img src="../assets/shot-ioha-certificates.png" alt="IOHA Certificates Platform interface" />
+    </div>
+
+    <div class="arch-grid">
+      <div class="arch-card">
+        <h4>The Problem</h4>
+        <p style="margin: 0; color: #d1d5db;">Manually generating, signing, and verifying attendance certificates for dozens of international webinar attendees is slow and error-prone.</p>
+      </div>
+      <div class="arch-card">
+        <h4>Production Impact</h4>
+        <p style="margin: 0; color: #d1d5db;"><strong>165 live certificates issued</strong> across 5 webinars (62, 60, 33, 6, and 4 attendees per cohort), each with a unique ID and scannable QR verification code.</p>
+      </div>
+      <div class="arch-card">
+        <h4>Frontend &amp; PDF Engine</h4>
+        <p style="margin: 0; color: #d1d5db;">Next.js 16, React 19, Tailwind CSS, <code>pdf-lib</code> + <code>@pdf-lib/fontkit</code> for custom typography, <code>qrcode</code> for verification, and <code>jszip</code> for bulk downloads.</p>
+      </div>
+      <div class="arch-card">
+        <h4>Database &amp; Deployment</h4>
+        <p style="margin: 0; color: #d1d5db;">Prisma ORM + Aiven PostgreSQL cloud database, bulk CSV parsing via <code>papaparse</code>, and Vercel deployment with strict TypeScript &amp; ESLint CI checks.</p>
+      </div>
+    </div>
+
+    <div class="teach-box">
+      <h4>How I use this to teach beginners</h4>
+      <p style="margin: 0; color: #d1d5db;">
+        This is the exact blueprint I teach for <strong>Database + Backend + Frontend</strong>: a CSV goes in, Prisma stores each record in PostgreSQL, and the browser renders a verifiable PDF on demand.
+      </p>
+    </div>
+  </main>
+</body>
+</html>

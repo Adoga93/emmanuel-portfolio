@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Emmanuel Adoga Ode — AI Builder &amp; Technical Instructor</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <nav class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-dot"></span>
+        <span>Emmanuel Ode</span>
+      </a>
+      <div class="nav-links">
+        <a href="#prompt-lab">Prompting Lab</a>
+        <a href="#projects">4 Shipped Apps</a>
+        <a href="#credentials">Credentials</a>
+        <a href="cv.html">Interactive CV</a>
+      </div>
+      <a class="btn btn-primary" href="cv.html">View / Print CV →</a>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="container hero-grid">
+      <div>
+        <div class="pill">
+          <span>●</span>
+          <span>AAIF 2024 Scholar • AI Foundations &amp; Vibe Coding</span>
+        </div>
+        <h1>I don’t just prompt AI—I <span>ship live software</span> with it.</h1>
+        <p class="hero-sub">
+          I’m <strong>Emmanuel Adoga Ode</strong>—an engineer, technical instructor, and AI-native builder based in Lagos. I turn plain-English prompts into production web apps, bots, and databases, and I teach beginners how to do the exact same thing without getting lost in jargon.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#projects">Explore the 4 Apps</a>
+          <a class="btn btn-outline" href="cv.html">Open Styled CV (PDF-Ready)</a>
+          <a class="btn btn-outline" href="#prompt-lab">See How I Prompt</a>
+        </div>
+      </div>
+
+      <div class="portrait-card">
+        <img src="assets/emmanuel.jpg" alt="Emmanuel Adoga Ode" />
+        <div class="portrait-caption">
+          <span><strong>Engr. Emmanuel Ode</strong></span>
+          <span class="mono">Lagos, NG</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="container metrics">
+      <div class="metric">
+        <div class="metric-val green">4</div>
+        <div class="metric-label">Production AI &amp; Web Apps Built</div>
+      </div>
+      <div class="metric">
+        <div class="metric-val">165</div>
+        <div class="metric-label">QR-Verified Certificates Issued Live</div>
+      </div>
+      <div class="metric">
+        <div class="metric-val amber">₦0/mo</div>
+        <div class="metric-label">SaaS Cost for Client Class Recorder</div>
+      </div>
+      <div class="metric">
+        <div class="metric-val">2024</div>
+        <div class="metric-label">AAIF Scholarship (2nd Cohort)</div>
+      </div>
+    </div>
+  </header>
+
+  <!-- UNIQUE INTERACTIVE PROMPTING LAB -->
+  <section id="prompt-lab" class="section">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <h2>The Vibe Coding &amp; Prompting Lab</h2>
+          <p>How I structure prompts to build reliable software—and how I explain each layer to complete beginners.</p>
+        </div>
+      </div>
+
+      <div class="prompt-lab">
+        <div class="prompt-tabs">
+          <button class="prompt-tab active" onclick="showTab('arch', this)">1. Architecture Prompting</button>
+          <button class="prompt-tab" onclick="showTab('debug', this)">2. Fixing AI Hallucinations</button>
+          <button class="prompt-tab" onclick="showTab('teach', this)">3. Teaching Beginners</button>
+        </div>
+
+        <div id="tab-arch" class="prompt-body">
+          <div class="code-box">// PROMPT PATTERN: ROLE + CONSTRAINTS + STACK
+"Act as a senior full-stack engineer.
+Goal: Build a zero-cost class recording portal so an instructor never pays monthly SaaS fees.
+Architecture:
+- Bot: Playwright script to join &amp; capture sessions
+- Portal: Next.js + Tailwind + Google APIs
+- Tunnel: Expose locally via cloudflared
+Constraint: Keep auth simple, verify every route builds with zero TypeScript errors."</div>
+          <div class="teach-box">
+            <h4>Why this works (and what I teach students)</h4>
+            <p style="color: #d1d5db; font-size: 0.94rem;">
+              Beginners fail at vibe coding when they write vague 1-line prompts like <em>"build me a Zoom recorder."</em>
+            </p>
+            <p style="color: var(--muted); font-size: 0.92rem;">
+              I teach learners to split every app into <strong>4 simple buckets</strong> before prompting: <strong>Frontend</strong> (what users click), <strong>Backend</strong> (the logic/worker), <strong>Database</strong> (where data lives), and <strong>Deployment</strong> (how the world reaches it).
+            </p>
+          </div>
+        </div>
+
+        <div id="tab-debug" class="prompt-body" style="display: none;">
+          <div class="code-box">// PROMPT PATTERN: CONTEXT + ERROR + BOUNDARY
+"Prisma threw a connection error on Aiven PostgreSQL.
+Do NOT rewrite the schema or ignore TypeScript checks.
+1. Inspect prisma/schema.prisma and .env
+2. Run a read-only count query to verify connectivity
+3. Report the exact error if the DB is paused."</div>
+          <div class="teach-box">
+            <h4>Handling AI mistakes without panic</h4>
+            <p style="color: #d1d5db; font-size: 0.94rem;">
+              AI models hallucinate when context is missing or when a prompt invites them to guess.
+            </p>
+            <p style="color: var(--muted); font-size: 0.92rem;">
+              In my classes, I show students <strong>why</strong> models make mistakes (token prediction &amp; context limits) and how to feed exact error logs back into the AI with strict <em>"do not touch X"</em> guardrails.
+            </p>
+          </div>
+        </div>
+
+        <div id="tab-teach" class="prompt-body" style="display: none;">
+          <div class="code-box">// BEGINNER ANALOGY: THE RESTAURANT MODEL
+- Frontend (Menu &amp; Dining Room): React / Next.js
+- Backend (Kitchen): Node.js / Express / Python
+- Database (Pantry): PostgreSQL + Prisma ORM
+- Login / Auth (VIP Keycard): Sessions / Tokens
+- Deployment (Opening the Doors): Vercel / Cloudflare</div>
+          <div class="teach-box">
+            <h4>From zero code to live URL</h4>
+            <p style="color: #d1d5db; font-size: 0.94rem;">
+              Having delivered live practical instruction for international OHTA cohorts, I know beginners shut down when drowned in jargon.
+            </p>
+            <p style="color: var(--muted); font-size: 0.92rem;">
+              Whether a student uses <strong>Lovable, Bolt.new, v0, Cursor, or Antigravity</strong>, once they grasp the Restaurant Model, they can debug and ship real apps confidently.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4 SHIPPED PROJECTS -->
+  <section id="projects" class="section">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <h2>4 Real-World Shipped Projects</h2>
+          <p>Click any project to open its full case study—including the problem, live screenshot, system architecture, and prompting workflow.</p>
+        </div>
+      </div>
+
+      <div class="projects-grid">
+        <a class="project-card" href="projects/quick-raman.html">
+          <div class="project-shot">
+            <img src="assets/shot-quick-raman.png" alt="Automated Class and Meeting Recorder screenshot" />
+          </div>
+          <div class="project-content">
+            <div class="project-tag">Flagship • Automation &amp; Web Portal</div>
+            <h3>Automated Class &amp; Meeting Recorder</h3>
+            <p>Built and pushed live so an online instructor can automatically record and archive every class at ₦0 recurring SaaS cost.</p>
+            <div class="badges">
+              <span class="badge">Next.js 16</span>
+              <span class="badge">Playwright Bot</span>
+              <span class="badge">Google APIs</span>
+              <span class="badge">Cloudflare Tunnel</span>
+            </div>
+            <span class="mono" style="color: var(--accent); font-size: 0.85rem;">Read Case Study →</span>
+          </div>
+        </a>
+
+        <a class="project-card" href="projects/ioha-certificates.html">
+          <div class="project-shot">
+            <img src="assets/shot-ioha-certificates.png" alt="IOHA Certificates Platform screenshot" />
+          </div>
+          <div class="project-content">
+            <div class="project-tag">Production • 165 Certificates Issued</div>
+            <h3>IOHA Certificates Platform</h3>
+            <p>Full-stack certificate generation and QR-verification app on Vercel—already used to issue 165 certificates across 5 webinars.</p>
+            <div class="badges">
+              <span class="badge">Next.js 16</span>
+              <span class="badge">Prisma</span>
+              <span class="badge">Aiven PostgreSQL</span>
+              <span class="badge">pdf-lib + QRCode</span>
+            </div>
+            <span class="mono" style="color: var(--accent); font-size: 0.85rem;">Read Case Study →</span>
+          </div>
+        </a>
+
+        <a class="project-card" href="projects/pas-board.html">
+          <div class="project-shot">
+            <img src="assets/shot-pas-board.png" alt="PAS Board Interactive Whiteboard screenshot" />
+          </div>
+          <div class="project-content">
+            <div class="project-tag">EdTech • Live Teaching Tool</div>
+            <h3>PAS Board — Real-Time Tutor Whiteboard</h3>
+            <p>Collaborative digital whiteboard with PDF annotation, WebSocket sync, and peer-to-peer support built for live online teaching.</p>
+            <div class="badges">
+              <span class="badge">React 18</span>
+              <span class="badge">TypeScript</span>
+              <span class="badge">WebSockets</span>
+              <span class="badge">Docker</span>
+            </div>
+            <span class="mono" style="color: var(--accent); font-size: 0.85rem;">Read Case Study →</span>
+          </div>
+        </a>
+
+        <a class="project-card" href="projects/gradi-noise-map.html">
+          <div class="project-shot">
+            <img src="assets/shot-gradi-noise-map.png" alt="Gradi Noise Map Generator screenshot" />
+          </div>
+          <div class="project-content">
+            <div class="project-tag">Enterprise • Data Visualization</div>
+            <h3>Gradi Noise Map Generator (gradihs.org)</h3>
+            <p>Proprietary web tool turning raw field sound measurements into spatial gradient contour maps—showcased to Chevron HSE leadership.</p>
+            <div class="badges">
+              <span class="badge">Spatial Mapping</span>
+              <span class="badge">Web App</span>
+              <span class="badge">gradihs.org</span>
+            </div>
+            <span class="mono" style="color: var(--accent); font-size: 0.85rem;">Read Case Study →</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CREDENTIALS -->
+  <section id="credentials" class="section">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <h2>Teaching &amp; Credentials</h2>
+          <p>Grounded in formal engineering discipline, AI training, and real cohort instruction.</p>
+        </div>
+      </div>
+
+      <div class="cred-grid">
+        <div class="cred-card">
+          <h4>African AI Foundation (AAIF)</h4>
+          <p>Awarded the AAIF Scholarship (2nd Cohort, 2024), deepening applied AI foundations and practical builder workflows.</p>
+        </div>
+        <div class="cred-card">
+          <h4>OHTA Cohort Instructor</h4>
+          <p>Delivered live practical instruction for international OHTA cohorts (201, 502, 503, 505, 507) and automated onboarding.</p>
+        </div>
+        <div class="cred-card">
+          <h4>B.Sc. &amp; COREN R.Eng</h4>
+          <p>Civil Engineering graduate (OAU, 2018 — Best Performance Award in Transportation Engineering) &amp; Google Data Analytics Certified.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span>© 2026 Emmanuel Adoga Ode • Lagos, Nigeria</span>
+      <div style="display: flex; gap: 18px;">
+        <a href="mailto:odeadoga@gmail.com">odeadoga@gmail.com</a>
+        <a href="cv.html" style="color: var(--accent);">Open Styled CV →</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function showTab(id, btn) {
+      document.querySelectorAll('.prompt-body').forEach(el => el.style.display = 'none');
+      document.querySelectorAll('.prompt-tab').forEach(el => el.classList.remove('active'));
+      document.getElementById('tab-' + id).style.display = 'grid';
+      btn.classList.add('active');
+    }
+  </script>
+</body>
+</html>

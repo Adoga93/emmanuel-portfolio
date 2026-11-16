@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PAS Board Interactive Whiteboard — Emmanuel Ode</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <nav class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="../index.html"><span class="brand-dot"></span><span>Emmanuel Ode</span></a>
+      <div class="nav-links">
+        <a href="../index.html#projects">All 4 Projects</a>
+        <a href="../cv.html">Interactive CV</a>
+      </div>
+      <a class="btn btn-primary" href="../cv.html">View / Print CV →</a>
+    </div>
+  </nav>
+
+  <main class="container case-hero">
+    <a class="breadcrumb" href="../index.html#projects">← Back to All Projects</a>
+    <div class="project-tag">Case Study 03 • EdTech &amp; Real-Time Collaboration</div>
+    <h1 style="font-size: clamp(1.9rem, 3.8vw, 2.8rem); margin-bottom: 12px;">PAS Board — Real-Time Tutor Whiteboard</h1>
+    <p style="color: var(--muted); max-width: 740px; font-size: 1.05rem;">
+      A real-time collaborative digital whiteboard and PDF annotation tool built specifically for live online teaching, visual explanations, and student assignment workflows.
+    </p>
+
+    <div class="case-shot-lg">
+      <img src="../assets/shot-pas-board.png" alt="PAS Board interactive whiteboard interface" />
+    </div>
+
+    <div class="arch-grid">
+      <div class="arch-card">
+        <h4>The Problem</h4>
+        <p style="margin: 0; color: #d1d5db;">Teaching technical concepts remotely is much harder when you can't sketch diagrams, annotate PDFs, and share live boards with students seamlessly.</p>
+      </div>
+      <div class="arch-card">
+        <h4>Key Capabilities</h4>
+        <p style="margin: 0; color: #d1d5db;">Smooth freehand drawing (<code>perfect-freehand</code>), multi-page PDF loading and export (<code>pdfjs-dist</code>, <code>jspdf</code>), and real-time room sync.</p>
+      </div>
+      <div class="arch-card">
+        <h4>Frontend Stack</h4>
+        <p style="margin: 0; color: #d1d5db;">React 18, TypeScript, Vite, Tailwind CSS, and Lucide icons.</p>
+      </div>
+      <div class="arch-card">
+        <h4>Real-Time Backend &amp; Packaging</h4>
+        <p style="margin: 0; color: #d1d5db;">Express (<code>server.mjs</code>), WebSockets (<code>ws</code>), PeerJS for peer-to-peer connectivity, and Dockerfile containerization.</p>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

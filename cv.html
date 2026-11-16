@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Emmanuel Adoga Ode — CV | AI Application Builder & Technical Instructor</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --ink: #0f172a;
+      --muted: #475569;
+      --accent: #059669;
+      --accent-bg: #ecfdf5;
+      --border: #e2e8f0;
+      --bg: #f1f5f9;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.5;
+      padding: 28px 16px 56px;
+    }
+
+    .toolbar {
+      max-width: 860px;
+      margin: 0 auto 18px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 16px;
+      border-radius: 10px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-decoration: none;
+      cursor: pointer;
+      border: 1px solid #cbd5e1;
+      background: #ffffff;
+      color: var(--ink);
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: #ffffff;
+    }
+
+    .sheet {
+      max-width: 860px;
+      margin: 0 auto;
+      background: #ffffff;
+      border-radius: 16px;
+      box-shadow: 0 20px 50px rgba(15, 23, 42, 0.08);
+      overflow: hidden;
+    }
+
+    .header {
+      background: linear-gradient(135deg, #090b10 0%, #111827 100%);
+      color: #ffffff;
+      padding: 34px 38px;
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .avatar {
+      width: 96px;
+      height: 96px;
+      border-radius: 16px;
+      object-fit: cover;
+      object-position: top center;
+      border: 2px solid rgba(16, 185, 129, 0.65);
+      flex-shrink: 0;
+    }
+
+    .header h1 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.75rem;
+      margin: 0 0 4px;
+      letter-spacing: -0.02em;
+    }
+
+    .role-tag {
+      color: #34d399;
+      font-weight: 600;
+      font-size: 1rem;
+      margin-bottom: 10px;
+    }
+
+    .contact-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      font-size: 0.85rem;
+      color: #cbd5e1;
+    }
+
+    .contact-row a { color: #6ee7b7; text-decoration: none; }
+
+    .body {
+      padding: 30px 38px 36px;
+      display: grid;
+      grid-template-columns: 1.55fr 0.95fr;
+      gap: 30px;
+    }
+
+    h2 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 5px;
+      margin: 0 0 12px;
+    }
+
+    section { margin-bottom: 22px; }
+    section:last-child { margin-bottom: 0; }
+
+    p { margin: 0 0 10px; font-size: 0.9rem; color: #334155; }
+
+    .item { margin-bottom: 14px; }
+    .item:last-child { margin-bottom: 0; }
+
+    .item-title {
+      font-weight: 700;
+      font-size: 0.94rem;
+      color: var(--ink);
+    }
+
+    .item-meta {
+      font-size: 0.82rem;
+      color: var(--muted);
+      margin-bottom: 5px;
+    }
+
+    ul {
+      margin: 4px 0 0;
+      padding-left: 17px;
+      font-size: 0.86rem;
+      color: #334155;
+    }
+
+    li { margin-bottom: 4px; }
+
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 12px;
+    }
+
+    .chip {
+      font-size: 0.76rem;
+      font-weight: 600;
+      padding: 4px 9px;
+      border-radius: 6px;
+      background: var(--accent-bg);
+      color: #065f46;
+      border: 1px solid #a7f3d0;
+    }
+
+    .highlight-box {
+      background: #f8fafc;
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--accent);
+      border-radius: 8px;
+      padding: 12px 14px;
+      margin-bottom: 14px;
+      font-size: 0.85rem;
+    }
+
+    @media (max-width: 720px) {
+      .header { flex-direction: column; text-align: center; padding: 26px 22px; }
+      .contact-row { justify-content: center; }
+      .body { grid-template-columns: 1fr; padding: 24px 22px; }
+    }
+
+    @media print {
+      body { background: #ffffff; padding: 0; }
+      .toolbar { display: none !important; }
+      .sheet { box-shadow: none; border-radius: 0; max-width: 100%; }
+      .header { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      .chip { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    }
+  </style>
+</head>
+<body>
+  <div class="toolbar">
+    <a class="btn" href="index.html">← Back to Web Portfolio</a>
+    <button class="btn btn-primary" onclick="window.print()">Download / Save as PDF</button>
+  </div>
+
+  <article class="sheet">
+    <header class="header">
+      <img class="avatar" src="assets/emmanuel.jpg" alt="Emmanuel Adoga Ode" />
+      <div>
+        <h1>EMMANUEL ADOGA ODE, B.Sc., R.Eng (COREN)</h1>
+        <div class="role-tag">AI Application Builder &amp; Technical Instructor</div>
+        <div class="contact-row">
+          <span>Lagos, Nigeria</span>
+          <span>•</span>
+          <span>+234 816 471 0175</span>
+          <span>•</span>
+          <a href="mailto:odeadoga@gmail.com">odeadoga@gmail.com</a>
+          <span>•</span>
+          <a href="index.html">Interactive Portfolio</a>
+        </div>
+      </div>
+    </header>
+
+    <div class="body">
+      <!-- LEFT COLUMN -->
+      <div>
+        <section>
+          <h2>Profile</h2>
+          <p>
+            AI-native Product Builder and Technical Instructor with proven experience designing, prompting, building, and deploying full-stack web applications and automated tools. Combines a B.Sc. in Civil Engineering, an <strong>African AI Foundation (AAIF) 2024 Scholarship</strong>, and hands-on cohort instruction to teach complete beginners how AI works—and how to ship real products from scratch.
+          </p>
+        </section>
+
+        <section>
+          <h2>Shipped AI &amp; Web Products</h2>
+
+          <div class="item">
+            <div class="item-title">Automated Class &amp; Meeting Recorder (quick-raman)</div>
+            <div class="item-meta">Next.js 16 • React 19 • Google APIs • Playwright • Cloudflare Tunnels</div>
+            <ul>
+              <li>Built and deployed a live automated meeting-recording bot and web portal so an instructor can record and archive all classes at <strong>zero recurring SaaS cost</strong>.</li>
+            </ul>
+          </div>
+
+          <div class="item">
+            <div class="item-title">IOHA Certificates Platform (ioha-certificates)</div>
+            <div class="item-meta">Next.js 16 • Prisma ORM • Aiven PostgreSQL • pdf-lib • QRCode • Vercel</div>
+            <ul>
+              <li>Built and deployed a production certificate platform that has issued <strong>165 QR-verified PDF certificates across 5 international webinars</strong>, with bulk CSV imports and ZIP batch exports.</li>
+            </ul>
+          </div>
+
+          <div class="item">
+            <div class="item-title">PAS Board — Interactive Real-Time Tutor Whiteboard</div>
+            <div class="item-meta">React • TypeScript • Express • WebSockets • PeerJS • Docker</div>
+            <ul>
+              <li>Built a real-time collaborative whiteboard and PDF annotation tool for live online instruction and visual walkthroughs.</li>
+            </ul>
+          </div>
+
+          <div class="item">
+            <div class="item-title">Gradi Noise Map Generator (gradihs.org)</div>
+            <div class="item-meta">Web Application • Spatial Data Visualization</div>
+            <ul>
+              <li>Developed and deployed a proprietary web tool converting field sound levels into spatial contour maps; showcased to Chevron HSE leadership.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section>
+          <h2>Teaching &amp; Leadership Experience</h2>
+
+          <div class="item">
+            <div class="item-title">Technical Training Coordinator &amp; Instructor / Project Lead</div>
+            <div class="item-meta">Gradi Health &amp; Safety Limited — Lagos | July 2025 – Present</div>
+            <ul>
+              <li>Delivered practical technical instruction for international OHTA training cohorts (OHTA 201, 502, 503, 505, 507), simplifying complex technical concepts for learners.</li>
+              <li>Automated candidate registration and onboarding workflows, and deployed internal web tooling.</li>
+            </ul>
+          </div>
+
+          <div class="item">
+            <div class="item-title">Site &amp; Safety Engineer (Project &amp; Team Lead)</div>
+            <div class="item-meta">Envision Homes / OAT Nigeria / Awestruck Nigeria | Dec 2018 – June 2025</div>
+            <ul>
+              <li>Led multidisciplinary teams, delivered daily technical briefings, and managed execution across commercial and residential engineering projects.</li>
+            </ul>
+          </div>
+        </section>
+      </div>
+
+      <!-- RIGHT COLUMN -->
+      <div>
+        <section>
+          <h2>Prompting &amp; AI Stack</h2>
+          <div class="highlight-box">
+            <strong>Core Teaching Edge:</strong> Translating prompt engineering, LLM hallucinations, frontend, backend, databases, and deployment into plain-English workflows for non-coders.
+          </div>
+          <div class="chips">
+            <span class="chip">Antigravity</span>
+            <span class="chip">Gemini</span>
+            <span class="chip">Prompt Engineering</span>
+            <span class="chip">Cursor / Bolt / Lovable</span>
+            <span class="chip">Next.js &amp; React</span>
+            <span class="chip">TypeScript</span>
+            <span class="chip">Node.js &amp; Express</span>
+            <span class="chip">Prisma &amp; PostgreSQL</span>
+            <span class="chip">REST APIs &amp; WebSockets</span>
+            <span class="chip">Playwright</span>
+            <span class="chip">Vercel &amp; Docker</span>
+            <span class="chip">Cloudflare Tunnels</span>
+          </div>
+        </section>
+
+        <section>
+          <h2>Scholarships &amp; Credentials</h2>
+          <div class="item">
+            <div class="item-title">African AI Foundation (AAIF) Scholarship</div>
+            <div class="item-meta">2nd Cohort • 2024</div>
+          </div>
+          <div class="item">
+            <div class="item-title">Google Data Analytics Professional Certificate</div>
+            <div class="item-meta">Google / Coursera (Python, SQL, Tableau)</div>
+          </div>
+          <div class="item">
+            <div class="item-title">Registered Engineer (R.Eng)</div>
+            <div class="item-meta">Council for the Regulation of Engineering in Nigeria (COREN)</div>
+          </div>
+          <div class="item">
+            <div class="item-title">Jobberman Soft Skills Certification</div>
+            <div class="item-meta">Workplace Collaboration &amp; Problem Solving</div>
+          </div>
+        </section>
+
+        <section>
+          <h2>Education</h2>
+          <div class="item">
+            <div class="item-title">B.Sc. in Civil Engineering</div>
+            <div class="item-meta">Obafemi Awolowo University (OAU), Ile-Ife • 2018</div>
+            <p style="font-size: 0.82rem;"><em>Award:</em> Ifedayo Akintunde Prize for Overall Best Performance in Transportation Engineering (2016/2017)</p>
+          </div>
+        </section>
+      </div>
+    </div>
+  </article>
+</body>
+</html>
